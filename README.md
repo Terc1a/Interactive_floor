@@ -1,66 +1,66 @@
-# Unity Tile Interaction Project
+# Проект Интерактивного Пола на Unity
 
-This Unity project implements an interactive floor system using a tile-based structure. The system is designed according to the technical specification and features multiple levels, segments, a tile editor, and integration with an external API.
+Этот проект реализует систему интерактивного пола с использованием плиточной структуры в 2D. Проект разработан в соответствии с техническим заданием и включает поддержку уровней, сегментов, редактора и интеграции с внешним API.
 
-## 🎮 Features
+## 🎮 Основные возможности
 
-- 2D tile-based interactive environment
-- Segment grouping and control
-- Level loading and management
-- Basic tile editor UI
-- API integration for data retrieval
-- Modular architecture for future extensions
+- 2D-интерфейс с плиточной системой
+- Группировка плиток в сегменты
+- Загрузка и управление уровнями
+- UI редактор уровней
+- Интеграция с API для получения данных
+- Модульная архитектура для расширения
 
-## 📁 Project Structure
+## 📁 Структура проекта
 
 ```
 Assets/
 ├── Scripts/
-│   ├── Core/             # Base classes: Tile, Segment, Level, Signal
-│   ├── Managers/         # Game, Level and API managers
-│   └── UI/               # User interface scripts
-├── Prefabs/              # Tile and Segment prefabs (to be added)
-├── Scenes/               # MainMenu, LevelEditor, GameScene
+│   ├── Core/             # Базовые классы: Tile, Segment, Level, Signal
+│   ├── Managers/         # Менеджеры игры, уровней и API
+│   └── UI/               # Скрипты интерфейса
+├── Prefabs/              # Префабы плиток и сегментов (добавляются вручную)
+├── Scenes/               # Сцены: MainMenu, LevelEditor, GameScene
 └── Resources/
-    ├── Tiles/            # Tile assets
-    └── Levels/           # Level configurations
+    ├── Tiles/            # Ассеты плиток
+    └── Levels/           # Конфигурации уровней
 ```
 
-## 🚀 Getting Started
+## 🚀 Начало работы
 
-1. Open Unity and create a new 2D project.
-2. Unpack the contents of this repository into the `Assets` directory.
-3. Create necessary prefabs for `Tile` and `Segment`.
-4. Add your scenes: `MainMenu`, `LevelEditor`, `GameScene`.
-5. Setup UnityEvent triggers for tile clicks and UI buttons.
-6. Assign scripts to appropriate GameObjects.
+1. Откройте Unity и создайте новый 2D проект.
+2. Распакуйте содержимое архива в директорию `Assets`.
+3. Создайте необходимые префабы (`Tile`, `Segment`).
+4. Добавьте сцены: `MainMenu`, `LevelEditor`, `GameScene`.
+5. Настройте UI и события для управления игрой.
+6. Присвойте скрипты соответствующим объектам.
 
-## 🌐 API Integration
+## 🌐 Интеграция с API
 
-APIManager includes an example GET request to an endpoint:
+В `APIManager` реализован пример запроса GET по адресу:
 
 ```
 http://192.168.31.225:8000/books
 ```
 
-Update the endpoint and response handling logic according to your real API.
+Вы можете изменить адрес и логику обработки в зависимости от своей задачи.
 
-## 🛠️ Requirements
+## 🛠️ Требования
 
-- Unity 2021 or newer
-- .NET 4.x scripting runtime
-- Internet access for API features
+- Unity версии 2021 или новее
+- Сценарный движок .NET 4.x
+- Подключение к интернету для работы с API
 
-## 📌 Notes
+## 📌 Примечания
 
-- This is a scaffold project based on a technical specification.
-- You are expected to add Unity UI elements, prefabs, and concrete game logic.
-- Use `GameManager`, `APIManager`, and `UIManager` as central control points.
+- Это каркас проекта на основе технического задания.
+- Пользователь должен самостоятельно добавить UI, анимации, уровни и поведение.
+- Основные точки входа: `GameManager`, `APIManager`, `UIManager`.
 
-## 📃 License
+## 📃 Лицензия
 
-This project is provided "as-is" under an open-source license for educational and prototyping use.
+Проект предоставляется "как есть" и предназначен для образовательных целей и быстрого прототипирования.
 
 ---
 
-Created by AI based on your provided technical specification.
+Создан на основе вашего технического задания с помощью ИИ.
